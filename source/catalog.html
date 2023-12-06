@@ -6,24 +6,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="images/icons/favicon-32.svg" type="image/svg+xml">
-    <!-- Т.к. в макете был размер фавиконки 152, то его тоже добавила -->
-    <link rel="icon" href="images/icons/favicon-152.svg" type="image/svg+xml">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__logo-wrapper">
-        <a class="main-header__logo-icon-link" href="index.html">
+        <a class="main-header__logo-link" href="#">
           <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg" width="70" height="59" type="image/svg+xml">
-            <source media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg" width="70" height="59">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg" width="60" height="50">
             <img class="main-header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип магазина">
           </picture>
-        </a>
-        <a class="main-header__logo-link" href="index.html">
           <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo.svg" width="118" height="21" type="image/svg+xml">
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg" width="118" height="21">
             <img class="main-header__logo" src="images/logo.svg" width="101" height="18" alt="Cat Energy">
           </picture>
         </a>
@@ -55,9 +53,9 @@
             <a class="product__link" href="#">
               <!-- Для маленьких банок не добавляла source под 1440, т.к. у них с планшетом одинаковые размеры, размеры у планшета и десктопа отличаются только у крупных банок -->
               <picture>
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-1-tablet@1x.webp 1x, images/product-1-tablet@2x.webp 2x" width="161" height="172">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-1-tablet@1x.webp 1x, images/product-1-tablet@2x.webp 2x" width="161" height="172">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-1-tablet@1x.png 1x, images/product-1-tablet@2x.png 2x" width="161" height="172">
                 <source type="image/webp" srcset="images/product-1-mobile@1x.webp 1x, images/product-1-mobile@2x.webp 2x" width="68" height="86">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-1-tablet@1x.png 1x, images/product-1-tablet@2x.png 2x" width="161" height="172">
                 <img class="product__image" src="images/product-1-mobile@1x.png" srcset="images/product-1-mobile@2x.png 2x" width="68" height="86" alt="Cat Energy PRO 500 грамм со вкусом курицы">
               </picture>
             </a>
@@ -87,11 +85,11 @@
           <li class="products__item product">
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1440px)" type="image/webp" srcset="images/product-2-desktop@1x.webp 1x, images/product-2-desktop@2x.webp 2x" width="172" height="196">
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-2-tablet@1x.webp 1x, images/product-2-tablet@2x.webp 2x" width="168" height="206">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/product-2-desktop@1x.webp 1x, images/product-2-desktop@2x.webp 2x" width="172" height="196">
+                <source type="image/png"  media="(min-width: 1440px)" srcset="images/product-2-desktop@1x.png 1x, images/product-2-desktop@2x.png 2x" width="172" height="196">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-2-tablet@1x.webp 1x, images/product-2-tablet@2x.webp 2x" width="168" height="206">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-2-tablet@1x.png 1x, images/product-2-tablet@2x.png 2x" width="168" height="206">
                 <source type="image/webp" srcset="images/product-2-mobile@1x.webp 1x, images/product-2-mobile@2x.webp 2x" width="84" height="100">
-                <source media="(min-width: 1440px)" type="image/png" srcset="images/product-2-desktop@1x.png 1x, images/product-2-desktop@2x.png 2x" width="172" height="196">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-2-tablet@1x.png 1x, images/product-2-tablet@2x.png 2x" width="168" height="206">
                 <img class="product__image" src="images/product-2-mobile@1x.png" srcset="images/product-2-mobile@2x.png 2x" width="84" height="100" alt="Cat Energy PRO 1000 грамм со вкусом курицы">
               </picture>
             </a>
@@ -121,9 +119,9 @@
           <li class="products__item product">
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-3-tablet@1x.webp 1x, images/product-3-tablet@2x.webp 2x" width="163" height="174">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-3-tablet@1x.webp 1x, images/product-3-tablet@2x.webp 2x" width="163" height="174">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-3-tablet@1x.png 1x, images/product-3-tablet@2x.png 2x" width="163" height="174">
                 <source type="image/webp" srcset="images/product-3-mobile@1x.webp 1x, images/product-3-mobile@2x.webp 2x" width="68" height="78">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-3-tablet@1x.png 1x, images/product-3-tablet@2x.png 2x" width="163" height="174">
                 <img class="product__image" src="images/product-3-mobile@1x.png" srcset="images/product-3-mobile@2x.png 2x" width="68" height="78" alt="Cat Energy PRO 500 грамм со вкусом рыбы">
               </picture>
             </a>
@@ -153,11 +151,11 @@
           <li class="products__item product">
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1440px)" type="image/webp" srcset="images/product-4-desktop@1x.webp 1x, images/product-4-desktop@2x.webp 2x" width="172" height="196">
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-4-tablet@1x.webp 1x, images/product-4-tablet@2x.webp 2x" width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/product-4-desktop@1x.webp 1x, images/product-4-desktop@2x.webp 2x" width="172" height="196">
+                <source type="image/png" media="(min-width: 1440px)" srcset="images/product-4-desktop@1x.png 1x, images/product-4-desktop@2x.png 2x" width="172" height="196">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-4-tablet@1x.webp 1x, images/product-4-tablet@2x.webp 2x" width="168" height="200">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-4-tablet@1x.png 1x, images/product-4-tablet@2x.png 2x" width="168" height="200">
                 <source type="image/webp" srcset="images/product-4-mobile@1x.webp 1x, images/product-4-mobile@2x.webp 2x" width="84" height="100">
-                <source media="(min-width: 1440px)" type="image/png" srcset="images/product-4-desktop@1x.png 1x, images/product-4-desktop@2x.png 2x" width="172" height="196">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-4-tablet@1x.png 1x, images/product-4-tablet@2x.png 2x" width="168" height="200">
                 <img class="product__image" src="images/product-4-mobile@1x.png" srcset="images/product-4-mobile@2x.png 2x" width="84" height="100" alt="Cat Energy PRO 1000 грамм со вкусом рыбы">
               </picture>
             </a>
@@ -187,9 +185,9 @@
           <li class="products__item product">
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-5-tablet@1x.webp 1x, images/product-5-tablet@2x.webp 2x" width="161" height="171">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-5-tablet@1x.webp 1x, images/product-5-tablet@2x.webp 2x" width="161" height="171">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-5-tablet@1x.png 1x, images/product-5-tablet@2x.png 2x" width="161" height="171">
                 <source type="image/webp" srcset="images/product-5-mobile@1x.webp 1x, images/product-5-mobile@2x.webp 2x" width="68" height="78">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-5-tablet@1x.png 1x, images/product-5-tablet@2x.png 2x" width="161" height="171">
                 <img class="product__image" src="images/product-5-mobile@1x.png" srcset="images/product-5-mobile@2x.png 2x" width="68" height="78" alt="Cat Energy SLIM 500 грамм со вкусом гречки">
               </picture>
             </a>
@@ -219,11 +217,11 @@
           <li class="products__item product">
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 1440px)" type="image/webp" srcset="images/product-6-desktop@1x.webp 1x, images/product-6-desktop@2x.webp 2x" width="172" height="196">
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-6-tablet@1x.webp 1x, images/product-6-tablet@2x.webp 2x" width="168" height="200">
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/product-6-desktop@1x.webp 1x, images/product-6-desktop@2x.webp 2x" width="172" height="196">
+                <source type="image/png" media="(min-width: 1440px)" srcset="images/product-6-desktop@1x.png 1x, images/product-6-desktop@2x.png 2x" width="172" height="196">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-6-tablet@1x.webp 1x, images/product-6-tablet@2x.webp 2x" width="168" height="200">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-6-tablet@1x.png 1x, images/product-6-tablet@2x.png 2x" width="168" height="200">
                 <source type="image/webp" srcset="images/product-6-mobile@1x.webp 1x, images/product-6-mobile@2x.webp 2x" width="84" height="100">
-                <source media="(min-width: 1440px)" type="image/png" srcset="images/product-6-desktop@1x.png 1x, images/product-6-desktop@2x.png 2x" width="172" height="196">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-6-tablet@1x.png 1x, images/product-6-tablet@2x.png 2x" width="168" height="200">
                 <img class="product__image" src="images/product-6-mobile@1x.png" srcset="images/product-6-mobile@2x.png 2x" width="84" height="100" alt="Cat Energy SLIM 1000 грамм со вкусом гречки">
               </picture>
             </a>
@@ -253,9 +251,9 @@
           <li class="products__item product">
             <a class="product__link" href="#">
               <picture>
-                <source media="(min-width: 768px)" type="image/webp" srcset="images/product-7-tablet@1x.webp 1x, images/product-7-tablet@2x.webp 2x" width="163" height="174">
+                <source type="image/webp" media="(min-width: 768px)" srcset="images/product-7-tablet@1x.webp 1x, images/product-7-tablet@2x.webp 2x" width="163" height="174">
+                <source type="image/png" media="(min-width: 768px)" srcset="images/product-7-tablet@1x.png 1x, images/product-7-tablet@2x.png 2x" width="163" height="174">
                 <source type="image/webp" srcset="images/product-7-mobile@1x.webp 1x, images/product-7-mobile@2x.webp 2x" width="72" height="84">
-                <source media="(min-width: 768px)" type="image/png" srcset="images/product-7-tablet@1x.png 1x, images/product-7-tablet@2x.png 2x" width="163" height="174">
                 <img class="product__image" src="images/product-7-mobile@1x.png" srcset="images/product-7-mobile@2x.png 2x" width="72" height="84" alt="Cat Energy SLIM 500 грамм со вкусом риса">
               </picture>
             </a>

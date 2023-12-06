@@ -6,24 +6,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="images/icons/favicon-32.svg" type="image/svg+xml">
-    <!-- Т.к. в макете был размер фавиконки 152, то его тоже добавила -->
-    <link rel="icon" href="images/icons/favicon-152.svg" type="image/svg+xml">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__logo-wrapper">
-        <a class="main-header__logo-icon-link" href="index.html">
+        <a class="main-header__logo-link" href="#">
           <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg" width="70" height="59" type="image/svg+xml">
-            <source media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg" width="70" height="59">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg" width="60" height="50">
             <img class="main-header__logo-icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип магазина">
           </picture>
-        </a>
-        <a class="main-header__logo-link" href="index">
           <picture>
-            <source media="(min-width: 1440px)" srcset="images/logo.svg" width="118" height="21" type="image/svg+xml">
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo.svg" width="118" height="21">
             <img class="main-header__logo" src="images/logo.svg" width="101" height="18" alt="Cat Energy">
           </picture>
         </a>
