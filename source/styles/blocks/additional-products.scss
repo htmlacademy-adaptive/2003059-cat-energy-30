@@ -1,0 +1,16 @@
+.additional-products__title {
+  color: $secondary-font-color;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 25px 20px 35px;
+}
+
+.additional-products__list {
+  @include normalize-list;
+}
+
+.additional-products__promo {
+  padding: 35px 20px;
+}

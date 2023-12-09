@@ -1,0 +1,24 @@
+.promo {
+  font-family: $secondary-font;
+  background-color: $inverted-background-color;
+  background-image: linear-gradient(to top, $primary-background-color 178px, transparent 178px);
+  color: $inverted-font-color;
+}
+
+.promo__title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+.promo__slogan {
+  text-align: center;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: inherit;
+  margin: 0;
+}
+
+.promo__button {
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+.form {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__field {
+  &--comment {
+    width: 100%;
+    resize: none;
+  }
+}
+
+.form__list {
+  @include normalize-list;
+}
+
+.form__title {
+  color: $secondary-font-color;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: none;
+  margin-bottom: 36px;
+  display: block;
+}
+
+.form__button {
+  width: 100%;
+}
+
+.form__text {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: none;
+  font-family: $primary-font;
+}

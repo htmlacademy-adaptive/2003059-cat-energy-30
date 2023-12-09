@@ -1,0 +1,17 @@
+.nav-list {
+  @include normalize-list;
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.nav-list__item {
+  text-align: center;
+}
+
+.nav-list__link {
+  color: $secondary-font-color;
+  padding: 20px 0;
+  display: block;
+}

@@ -1,0 +1,9 @@
+.input {
+  font-family: inherit;
+  text-transform: uppercase;
+  color: inherit;
+
+  &::placeholder {
+    color: inherit;
+  }
+}

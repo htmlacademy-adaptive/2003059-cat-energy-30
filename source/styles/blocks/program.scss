@@ -1,0 +1,27 @@
+.program {
+  background-color: $secondary-background-color;
+}
+
+.program__title {
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: $secondary-font-color;
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.program__description {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.program__link {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $secondary-font-color;
+}

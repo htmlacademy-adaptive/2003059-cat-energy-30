@@ -1,0 +1,14 @@
+.promotion {
+  background-color: $inverted-background-color;
+  display: inline-block;
+  width: 100%;
+  padding: 187px 60px 43px;
+}
+
+.promotion__title {
+  color: $inverted-font-color;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
