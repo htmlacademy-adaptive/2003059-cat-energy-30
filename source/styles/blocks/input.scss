@@ -1,0 +1,11 @@
+.input {
+  font-family: inherit;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: 16px;
+  line-height: 18px;
+
+  &::placeholder {
+    color: inherit;
+  }
+}

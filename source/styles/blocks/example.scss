@@ -1,0 +1,47 @@
+.example {
+  background-color: #eaeaea;
+}
+
+.example__container {
+  padding: 25px 20px 40px;
+}
+
+.example__title {
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__list {
+  margin: 0;
+}
+
+.example__item {
+  text-align: center;
+}
+
+.example__value {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $secondary-font-color;
+}
+
+.example__text {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+}
+
+.example__costs {
+  text-align: center;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
