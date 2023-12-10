@@ -1,3 +1,7 @@
+.programs__container {
+  padding: 20px
+}
+
 .programs__list {
   @include normalize-list;
 }

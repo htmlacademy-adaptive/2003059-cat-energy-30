@@ -10,8 +10,8 @@
   line-height: 18px;
   color: $primary-font-color;
   background-color: $primary-background-color;
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   margin: 0;
 }
