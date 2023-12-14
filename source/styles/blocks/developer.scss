@@ -1,12 +1,12 @@
 .developer__link {
-  color: #666666;
+  color: $icon-color;
 
   &:hover .developer__logo {
-    color: $icon-link-color;
+    color: $icon-color-hover;
   }
 
   &:focus .developer__logo {
-    color: $icon-link-color;
+    color: $icon-color-hover;
   }
 
   &:active {
