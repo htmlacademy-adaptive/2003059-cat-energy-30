@@ -4,4 +4,17 @@
 
 .social-list__link {
   color: #666666;
+
+  &:hover {
+    color: $icon-link-color;
+  }
+
+  &:focus {
+    color: $icon-link-color;
+  }
+
+  &:active {
+    color: $icon-link-color;
+    opacity: 0.3;
+  }
 }

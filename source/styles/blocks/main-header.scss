@@ -3,10 +3,31 @@
   color: $secondary-font-color;
 }
 
-.main-header__container {
-  padding: 0;
-}
-
 .main-header__logo-wrapper {
   padding: 13px 60px 15px 20px;
+}
+
+.main-header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    color: $primary-font-color;
+  }
+}
+
+.main-header__logo .logo__image--text {
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }
