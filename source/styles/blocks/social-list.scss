@@ -3,5 +3,17 @@
 }
 
 .social-list__link {
-  color: #666666;
+  color: $icon-color;
+
+  &:hover {
+    color: $icon-color-hover;
+  }
+
+  &:focus {
+    color: $icon-color-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
