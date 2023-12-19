@@ -1,5 +1,12 @@
 .developer__link {
   color: $icon-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 23px;
+  }
 
   &:hover .developer__logo {
     color: $icon-color-hover;

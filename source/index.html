@@ -12,24 +12,15 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--index">
       <div class="main-header__container container">
         <div class="main-header__logo-wrapper">
           <a class="main-header__logo logo" href="#">
-
-            <!-- Я могу оставить лого-иконку под picture, а только текст под спрайт сделать? или иконку тоже обязательно спрайтом? -->
-
             <picture>
-              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-icon-desktop.svg" width="70" height="59">
+              <source type="image/svg+xml" media="(min-width: 1220px)" srcset="images/logo-icon-desktop.svg" width="70" height="59">
               <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-icon-tablet.svg" width="60" height="50">
               <img class="logo__image logo__image--icon" src="images/logo-icon-mobile.svg" width="33" height="38" alt="Логотип магазина">
             </picture>
-
-            <!-- Так как поведение у логотипов в хедере и футере отличается и в зависимости от разрешения и в зависимости от расположения - сделала 2 в спрайте для хедера и футера.
-
-              В хедере логотип при наведении и фокусе меняет лишь прозрачность, а при разных медиа от планшета и выше - меняется только цвет energy на №444444.
-
-              В футере же логотип всегда одинакового цвета, но при наведении и фокусе меняет свой цвет, а не прозрачность. По-другому пока не смогла решить. -->
 
             <svg class="logo__image logo__image--text" width="101" height="18" aria-hidden="true" focusable="false">
               <use href="images/sprite.svg#logo-text-header"></use>
@@ -58,11 +49,11 @@
     <main class="main-container">
       <section class="promo">
         <div class="promo__container container">
-          <h1 class="promo__title title">Функциональное питание для котов</h1>
+          <h1 class="promo__title title">Функциональное <br>питание для котов</h1>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/promo/promo-desktop@1x.webp 1x, images/promo/promo-desktop@2x.webp 2x" width="552" height="499">
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/promo/promo-desktop@1x.png 1x, images/promo/promo-desktop@2x.png 2x" width="552" height="499">
+            <source type="image/webp" media="(min-width: 1220px)" srcset="images/promo/promo-desktop@1x.webp 1x, images/promo/promo-desktop@2x.webp 2x" width="552" height="499">
+            <source type="image/png" media="(min-width: 1220px)" srcset="images/promo/promo-desktop@1x.png 1x, images/promo/promo-desktop@2x.png 2x" width="552" height="499">
             <source type="image/webp" media="(min-width: 768px)" srcset="images/promo/promo-tablet@1x.webp 1x, images/promo/promo-tablet@2x.webp 2x" width="709" height="609">
             <source type="image/jpeg" media="(min-width: 768px)" srcset="images/promo/promo-tablet@1x.jpg 1x, images/promo/promo-tablet@2x.jpg 2x" width="709" height="609">
             <source type="image/webp" srcset="images/promo/promo-mobile@1x.webp 1x, images/promo/promo-mobile@2x.webp 2x" width="280" height="270">
@@ -112,21 +103,27 @@
 
       <section class="example">
         <div class="example__container container">
-          <h2 class="example__title title">Живой пример</h2>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__text-wrapper">
+            <h2 class="example__title title">Живой пример</h2>
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__value">5 КГ</dt>
-              <dd class="example__text">снижение веса</dd>
-            </div>
-            <div class="example__item">
-              <dt class="example__value">60 ДНЕЙ</dt>
-              <dd class="example__text">затрачено времени</dd>
-            </div>
-          </dl>
+            <div class="example__result-wrapper">
+              <dl class="example__list">
+                <div class="example__item">
+                  <dt class="example__value">5 КГ</dt>
+                  <dd class="example__text">снижение веса</dd>
+                </div>
+                <div class="example__item">
+                  <dt class="example__value">60 ДНЕЙ</dt>
+                  <dd class="example__text">затрачено времени</dd>
+                </div>
+              </dl>
 
-          <p class="example__costs">Затраты на питание: 15 000 РУБ.</p>
+              <p class="example__costs">Затраты на питание:
+                <span>15 000 РУБ.</span>
+              </p>
+            </div>
+          </div>
 
           <div class="example__comparison comparison">
             <div class="comparison__images">
@@ -160,8 +157,12 @@
       <section class="contacts">
         <div class="contacts__container container">
           <h2 class="visually-hidden">Контакты.</h2>
-          <p class="contacts__cooperate" >приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          <div class="contacst__text-wrapper">
+            <p class="contacts__cooperate" >приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8
+              <span class="contacts__address-city">Санкт-Петербург</span>
+            </address>
+          </div>
         </div>
 
         <div class="contacts__map"></div>

@@ -4,6 +4,21 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: $primary-background-color;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 33px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+    background-color: transparent;
+  }
 }
 
 .nav-list__item {
@@ -11,7 +26,15 @@
 }
 
 .nav-list__link {
-  color: $secondary-font-color;
+  color: inherit;
   padding: 20px;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 0 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 0 13px;
+  }
 }

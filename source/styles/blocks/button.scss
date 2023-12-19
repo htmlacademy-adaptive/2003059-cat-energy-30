@@ -2,7 +2,7 @@
   display: inline-block;
   min-width: 240px;
   min-height: 40px;
-  padding: 10px 20px;
+  padding: 10px 26px;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
@@ -12,4 +12,10 @@
   background-color: $button-color;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
