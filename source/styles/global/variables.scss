@@ -18,5 +18,7 @@ $border-color: #cdcdcd;
 /* media-разрешения */
 $mobile-width: 320px;
 $tablet-width: 768px;
-// $desktop-width: 1440px;
-$desktop-width: 1220px;
+$desktop-width: 1330px;
+
+//горизонтальные отступы для контейнера на desktop
+$horizontal-padding: 55px;

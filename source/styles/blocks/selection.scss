@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 49px 110px 79px;
+    padding: 49px $horizontal-padding 79px;
   }
 }
 
