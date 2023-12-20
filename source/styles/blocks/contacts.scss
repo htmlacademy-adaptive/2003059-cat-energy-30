@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.contacst__text-wrapper {
+.contacts__text-wrapper {
   padding: 26px 20px;
   display: grid;
   justify-content: space-between;
@@ -22,6 +22,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 60px 70px 60px 80px;
     position: absolute;
     top: 95px;
     left: 110px;
@@ -50,13 +51,14 @@
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
+    line-height: 20px;
   }
 }
 
 .contacts__address-city {
   @media (min-width: $tablet-width) {
     display: block;
-    margin-top: 20px;
+    margin-top: 19px;
   }
 }
 
