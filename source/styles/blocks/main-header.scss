@@ -1,13 +1,45 @@
 .main-header {
   background-color: $primary-background-color;
   color: $secondary-font-color;
+  min-height: 65px;
+}
+
+.main-header--index {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to right, $primary-background-color 50%, transparent 50%);
+    background-color: $inverted-background-color;
+    color: $inverted-font-color;
+  }
+}
+
+.main-header__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px $horizontal-padding 0;
+  }
 }
 
 .main-header__logo-wrapper {
-  padding: 13px 60px 15px 20px;
+  padding: 13px 55px 14px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    display: flex;
+    align-self: start;
+  }
 }
 
 .main-header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   &:hover {
     opacity: 0.8;
   }
@@ -22,7 +54,18 @@
 
   @media (min-width: $tablet-width) {
     color: $primary-font-color;
+    max-width: 174px;
+    column-gap: 13px;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 202px;
+    column-gap: 14px;
+  }
+}
+
+.main-header__logo .logo__image {
+  margin: 0 auto;
 }
 
 .main-header__logo .logo__image--text {

@@ -1,7 +1,27 @@
 .programs__container {
   padding: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 82px $horizontal-padding 71px;
+  }
 }
 
 .programs__list {
   @include normalize-list;
+  display: grid;
+  row-gap: 20px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

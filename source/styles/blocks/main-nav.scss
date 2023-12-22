@@ -1,3 +1,13 @@
-.main-nav__list {
-  background-color: $primary-background-color;
+.main-nav {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 65%;
+    display: flex;
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 48%;
+  }
 }

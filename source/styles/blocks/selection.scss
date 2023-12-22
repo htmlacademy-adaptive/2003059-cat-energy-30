@@ -1,9 +1,25 @@
 .selection__container {
   padding: 27px 20px 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 70px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 49px $horizontal-padding 79px;
+  }
 }
 
 .selection__title {
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+  }
 }
 
 .selection__description {
@@ -12,4 +28,10 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

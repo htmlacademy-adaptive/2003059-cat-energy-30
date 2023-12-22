@@ -1,1 +1,12 @@
-// стили для блока-слайдера с котами на гавной
+// стили для блока-слайдера с котами на главной
+
+.comparison__images {
+  margin: 0 auto;
+  width: 280px;
+  min-height: 256px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    min-height: 512px;
+  }
+}

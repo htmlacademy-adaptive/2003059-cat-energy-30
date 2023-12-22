@@ -3,16 +3,42 @@
   background-color: $inverted-background-color;
   background-image: linear-gradient(to top, $primary-background-color 178px, transparent 178px);
   color: $inverted-font-color;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    color: $secondary-font-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to right, $primary-background-color 50%, transparent 50%);
+    background-color: $inverted-background-color;
+  }
 }
 
 .promo__container {
   padding: 27px 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 90px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 80px 52px;
+    min-height: 580px;
+  }
 }
 
 .promo__title {
   text-align: center;
   margin-bottom: 25px;
   color: inherit;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+  }
 }
 
 .promo__slogan {
@@ -21,8 +47,26 @@
   text-transform: uppercase;
   color: inherit;
   margin: 0;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+.promo__image {
+  display: flex;
+  margin: 0 auto;
 }
 
 .promo__button {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    padding: 14px 26px;
+    line-height: 26px;
+  }
 }

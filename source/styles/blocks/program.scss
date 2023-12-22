@@ -1,6 +1,14 @@
 .program {
   background-color: $secondary-background-color;
   padding: 30px 20px 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 57px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
 }
 
 .program__title {
@@ -12,11 +20,30 @@
   color: $secondary-font-color;
   margin: 0;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+  }
 }
 
 .program__description {
   margin: 0;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    color: $secondary-font-color;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 27px;
+  }
 }
 
 .program__link {
@@ -25,4 +52,10 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $secondary-font-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+    font-size: 20px;
+    line-height: normal;
+  }
 }
