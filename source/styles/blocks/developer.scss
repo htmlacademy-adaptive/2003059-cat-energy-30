@@ -1,23 +1,30 @@
 .developer__link {
-  color: $icon-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: $tablet-width) {
-    column-gap: 23px;
+  &::after {
+    content: "";
+    width: 27px;
+    height: 34px;
+    background-color: $icon-color;
+    mask-image: url("../../images/icons/stack.svg#logo-htmlacademy");
   }
 
-  &:hover .developer__logo {
-    color: $icon-color-hover;
+  &:hover::after {
+    background-color: $icon-color-hover;
   }
 
-  &:focus .developer__logo {
-    color: $icon-color-hover;
+  &:focus::after {
+    background-color: $icon-color-hover;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    column-gap: 23px;
   }
 }
 

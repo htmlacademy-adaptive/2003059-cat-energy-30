@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 80px 52px;
+    padding: 0 135px 52px;
     min-height: 580px;
   }
 }
@@ -38,6 +38,10 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 81px;
   }
 }
 

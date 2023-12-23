@@ -21,20 +21,32 @@
 }
 
 .social-list__link {
-  color: $icon-color;
+  background-color: $icon-color;
   display: block;
   width: 100%;
   height: 100%;
 
   &:hover {
-    color: $icon-color-hover;
+    background-color: $icon-color-hover;
   }
 
   &:focus {
-    color: $icon-color-hover;
+    background-color: $icon-color-hover;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--vk {
+    mask-image: url("../../images/icons/stack.svg#social-vkontakte");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#social-youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#social-telegram");
   }
 }

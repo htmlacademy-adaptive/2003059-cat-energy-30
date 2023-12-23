@@ -1,7 +1,20 @@
 .logo {
-  color: #111111;
+  display: flex;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo__image {
   display: flex;
+  margin: 0 auto;
 }
