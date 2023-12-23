@@ -2,18 +2,29 @@
 $primary-font:"Lato", "Arial", sans-serif;
 $secondary-font: "Oswald", "Arial", sans-serif;
 
-/* цвета */
+/* цвета шрифтов */
 $primary-font-color: #444444;
 $secondary-font-color: #000000;
 $inverted-font-color: #ffffff;
+
+/* цвета фонов */
 $primary-background-color: #ffffff;
 $secondary-background-color: #f2f2f2;
+$tertiary-background-color: #eaeaea;
 $inverted-background-color: #68b738;
+
+/* цвета элементов */
 $button-color: #68b738;
 $button-text-color: #ffffff;
 $icon-color: #666666;
 $icon-color-hover: #68b738;
-$border-color: #cdcdcd;
+
+/* цвета границ */
+$primary-border-color: #cdcdcd;
+$secondary-border-color: #e6e6e6;
+$tertiary-border-color: #d9d9d9;
+$fourth-border-color: #f2f2f2;
+$input-border-color: #e7e7e7;
 
 /* media-разрешения */
 $mobile-width: 320px;

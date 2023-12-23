@@ -4,14 +4,14 @@
   padding: 13px 0 19px;
   justify-content: space-between;
   column-gap: 50px;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $primary-border-color;
+  border-bottom: 1px solid $primary-border-color;
 
   @media (min-width: $tablet-width) {
     padding: 26px 38px 28px;
     row-gap: 25px;
     grid-template-columns: 1fr auto auto;
-    border: 1px solid $border-color;
+    border: 1px solid $primary-border-color;
   }
 
   @media (min-width: $desktop-width) {

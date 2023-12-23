@@ -30,13 +30,13 @@
   }
 
   &--program {
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid $tertiary-border-color;
+    border-bottom: 1px solid $tertiary-border-color;
     padding: 22px 0 19px;
     margin-bottom: 26px;
 
     @media (min-width: $tablet-width) {
-      border: 1px solid #e7e7e7;
+      border: 1px solid $input-border-color;
       padding: 23px 27px 27px 87px;
       margin-bottom: 65px;
     }
@@ -117,6 +117,26 @@
 }
 
 .form__field {
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+
+  @media (min-width: $tablet-width) {
+    background-position: right 14px center;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: right 16px center;
+  }
+
+  &--email {
+    background-image: url("../../images/icons/stack.svg#input-email");
+  }
+
+  &--telephone {
+    background-image: url("../../images/icons/stack.svg#input-phone");
+  }
+
   &--comment {
     width: 100%;
     resize: none;

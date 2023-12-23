@@ -5,7 +5,7 @@
   font-size: 16px;
   line-height: 18px;
   padding: 14px 15px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $input-border-color;
 
   &::placeholder {
     color: inherit;

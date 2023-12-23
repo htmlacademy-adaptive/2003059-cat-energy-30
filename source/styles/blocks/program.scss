@@ -1,6 +1,7 @@
 .program {
   background-color: $secondary-background-color;
   padding: 30px 20px 18px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 77px 316px 57px 52px;
@@ -18,27 +19,30 @@
   line-height: 37px;
   text-transform: uppercase;
   color: $secondary-font-color;
-  margin: 0;
-  margin-bottom: 29px;
+  margin: 0 0 29px 70px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 73px;
+    margin: 0 0 73px 162px;
   }
 }
 
 .program__description {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 19px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $tertiary-border-color;
 
   @media (min-width: $tablet-width) {
     color: $secondary-font-color;
     margin-bottom: 52px;
+    border-bottom: none;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,11 +51,37 @@
 }
 
 .program__link {
+  padding-right: 57px;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $secondary-font-color;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../../images/icons/stack.svg#arrow");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 32px 10px;
+    width: 24px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+  }
+
+  &:hover::after {
+    right: 9px;
+    width: 32px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;

@@ -3,17 +3,25 @@
   display: inline-block;
   width: 100%;
   padding: 187px 59px 43px;
+  background-image: url("../../images/icons/stack.svg#promotion-gift");
+  background-size: 78px 80px;
+  background-repeat: no-repeat;
+  background-position: top 59px center;
 
   @media (min-width: $tablet-width) {
     padding: 71px 125px 69px 200px;
     min-height: 200px;
     display: flex;
     justify-content: end;
+    background-position: top 57px left 78px;
+    background-size: 80px 82px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 185px 42px 43px;
     justify-content: center;
+    background-position: top 56px center;
+    background-size: 80px 83px;
   }
 }
 

@@ -25,3 +25,39 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.programs__item {
+  background-repeat: no-repeat;
+
+  &--slim {
+    background-image: url("../../images/icons/stack.svg#cat-slim");
+    background-size: 50px 53px;
+    background-position: top 22px left 20px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 200px 211px;
+      background-position: top 81px right 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 100px 106px;
+      background-position: top 42px left 52px;
+    }
+  }
+
+  &--pro {
+    background-image: url("../../images/icons/stack.svg#cat-pro");
+    background-size: 67px 50px;
+    background-position: top 24px left 12px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 268px 200px;
+      background-position: top 92px right 31px;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 134px 100px;
+      background-position: top 47px left 35px;
+    }
+  }
+}
