@@ -1,8 +1,9 @@
 .product {
-  padding: 20px 20px 25px;
+  padding: 20px $horizontal-padding-mobile 24px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 17px;
+  border-bottom: 1px solid #ebebeb;
 
   @media (min-width: $tablet-width) {
     padding: 10px 37px 40px;
@@ -11,6 +12,7 @@
     background-image: linear-gradient(180deg, transparent 81px, $secondary-background-color 81px);
     row-gap: 22px;
     align-self: flex-start;
+    border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {

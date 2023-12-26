@@ -31,10 +31,10 @@
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <ul class="main-nav__list nav-list">
-            <li class="nav-list__item nav-list__item--current">
+            <li class="nav-list__item">
               <a class="nav-list__link" href="index.html">главная</a>
             </li>
-            <li class="nav-list__item">
+            <li class="nav-list__item nav-list__item--current">
               <a class="nav-list__link" href="#" aria-current="page">каталог продукции</a>
             </li>
             <li class="nav-list__item">
@@ -45,10 +45,10 @@
       </div>
     </header>
     <main class="main-container catalog">
-      <div class="catalog__container container">
-        <h1 class="catalog__title title">Каталог продукции</h1>
+      <h1 class="catalog__title title container">Каталог продукции</h1>
 
-        <section class="products">
+      <section class="products">
+        <div class="products__container container">
           <h2 class="visually-hidden">Основные товары.</h2>
           <ul class="products__list">
             <li class="products__item product">
@@ -300,50 +300,51 @@
             <li class="products__item show-more">
               <h3 class="show-more__title">Показать еще 100500 товаров</h3>
 
-              <p class="show-more__description">На самом деле вкусов <br>гораздо больше!</p>
+              <p class="show-more__description">На самом деле вкусов гораздо больше!</p>
 
               <a class="show-more__button button" href="#">показать все</a>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="additional-products">
-          <div class="additional-products__container container">
-            <h2 class="additional-products__title">Дополнительные товары</h2>
-            <ul class="additional-products__list">
-              <li class="additional-products__item card">
-                <h3 class="card__title">Сахарозаменитель</h3>
-                <p class="card__volume">1 упаковка (100 г)</p>
-                <p class="card__price">200 ₽</p>
-                <a class="card__button button" href="#">заказать</a>
-              </li>
-              <li class="additional-products__item card">
-                <h3 class="card__title">питьевая вода</h3>
-                <p class="card__volume">5 литров</p>
-                <p class="card__price">50 ₽</p>
-                <a class="card__button button" href="#">заказать</a>
-              </li>
-              <li class="additional-products__item card">
-                <h3 class="card__title">молоко</h3>
-                <p class="card__volume">1 литр</p>
-                <p class="card__price">100 ₽</p>
-                <a class="card__button button" href="#">заказать</a>
-              </li>
-              <li class="additional-products__item card">
-                <h3 class="card__title">витамины</h3>
-                <p class="card__volume">1 упаковка (30 г)</p>
-                <p class="card__price">300 ₽</p>
-                <a class="card__button button" href="#">заказать</a>
-              </li>
-            </ul>
-            <div class="additional-products__promo">
-              <a class="promotion" href="#">
-                <p class="promotion__title">Закажите все <br>и получите чехол для <br>кота в подарок!</p>
-              </a>
-            </div>
+      <section class="additional-products">
+        <div class="additional-products__container container">
+          <h2 class="additional-products__title">Дополнительные товары</h2>
+          <ul class="additional-products__list">
+            <li class="additional-products__item card">
+              <h3 class="card__title">Сахарозаменитель</h3>
+              <p class="card__volume">1 упаковка (100 г)</p>
+              <p class="card__price">200 ₽</p>
+              <a class="card__button button" href="#">заказать</a>
+            </li>
+            <li class="additional-products__item card">
+              <h3 class="card__title">питьевая вода</h3>
+              <p class="card__volume">5 литров</p>
+              <p class="card__price">50 ₽</p>
+              <a class="card__button button" href="#">заказать</a>
+            </li>
+            <li class="additional-products__item card">
+              <h3 class="card__title">молоко</h3>
+              <p class="card__volume">1 литр</p>
+              <p class="card__price">100 ₽</p>
+              <a class="card__button button" href="#">заказать</a>
+            </li>
+            <li class="additional-products__item card">
+              <h3 class="card__title">витамины</h3>
+              <p class="card__volume">1 упаковка (30 г)</p>
+              <p class="card__price">300 ₽</p>
+              <a class="card__button button" href="#">заказать</a>
+            </li>
+          </ul>
+          <div class="additional-products__promo">
+            <a class="promotion" href="#">
+              <p class="promotion__title">Закажите все <br>и получите чехол для <br>кота в подарок!</p>
+            </a>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
       <section class="contacts contacts--dark">
         <div class="contacts__container container">
           <h2 class="visually-hidden">Контакты.</h2>

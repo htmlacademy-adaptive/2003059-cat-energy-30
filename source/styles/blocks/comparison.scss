@@ -1,12 +1,43 @@
-// стили для блока-слайдера с котами на главной
+.comparison {
+  position: relative;
+}
 
 .comparison__images {
   margin: 0 auto;
   width: 280px;
   min-height: 256px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     width: 560px;
     min-height: 512px;
+  }
+}
+
+.comparison__image-wrapper {
+  position: absolute;
+}
+
+.comparison__control-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.comparison__range {
+  appearance: none;
+  height: 40px;
+  background-color: transparent;
+  width: 100%;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background-color: $primary-background-color;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid $icon-color;
   }
 }

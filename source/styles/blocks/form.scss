@@ -32,12 +32,12 @@
   &--program {
     border-top: 1px solid $tertiary-border-color;
     border-bottom: 1px solid $tertiary-border-color;
-    padding: 22px 0 19px;
-    margin-bottom: 26px;
+    padding: 20px 0 20px;
+    margin-bottom: 23px;
 
     @media (min-width: $tablet-width) {
       border: 1px solid $input-border-color;
-      padding: 23px 27px 27px 87px;
+      padding: 23px 27px 27px 80px;
       margin-bottom: 65px;
     }
   }
@@ -59,6 +59,7 @@
 
   &--comment {
     margin-bottom: 23px;
+    row-gap: 0;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 65px;
@@ -66,11 +67,12 @@
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
+      margin-bottom: 70px;
     }
   }
 
   &--additional {
-    margin-bottom: 34px;
+    margin-bottom: 31px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 52px;
@@ -78,7 +80,24 @@
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
+      margin-bottom: 59px;
     }
+  }
+}
+
+.form__group--comment .form__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 77px;
+  }
+}
+
+.form__group--additional .form__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
   }
 }
 
@@ -94,7 +113,7 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 57px;
+    margin-bottom: 73px;
   }
 }
 
@@ -139,7 +158,12 @@
 
   &--comment {
     width: 100%;
+    height: 150px;
     resize: none;
+
+    @media (min-width: $tablet-width) {
+      height: 175px;
+    }
   }
 }
 
@@ -147,10 +171,11 @@
   @include normalize-list;
   display: grid;
   row-gap: 13px;
-  padding-left: 45px;
+  padding-left: 39px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
+    row-gap: 11px;
   }
 }
 
@@ -158,10 +183,12 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
+    row-gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -169,6 +196,10 @@
   @media (min-width: $tablet-width) {
     padding-left: 60px;
   }
+}
+
+.form__item {
+  padding: 6px;
 }
 
 .form__button-wrapper {
@@ -181,6 +212,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
+    column-gap: 70px;
   }
 }
 
@@ -192,6 +224,10 @@
     line-height: 26px;
     padding: 14px 26px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
   }
 }
 

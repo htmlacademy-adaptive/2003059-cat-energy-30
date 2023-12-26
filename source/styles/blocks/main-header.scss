@@ -9,29 +9,38 @@
     background-image: linear-gradient(to right, $primary-background-color 50%, transparent 50%);
     background-color: $inverted-background-color;
     color: $inverted-font-color;
+
+    .nav-list__item--current {
+      border-bottom-color: $inverted-font-color;
+    }
   }
 }
 
 .main-header__container {
+  padding: 0;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 25px 30px;
+    padding: 25px $horizontal-padding-tablet;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px $horizontal-padding 32px;
+    padding: 55px $horizontal-padding-desktop 32px;
   }
 }
 
 .main-header__logo-wrapper {
-  padding: 13px 55px 14px 20px;
+  padding: 13px 35px 14px $horizontal-padding-mobile;
+  border-bottom: 1px solid $secondary-border-color;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     display: flex;
     align-self: start;
+    border: none;
   }
 }
 

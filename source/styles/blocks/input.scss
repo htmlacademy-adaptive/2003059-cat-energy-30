@@ -4,8 +4,9 @@
   color: inherit;
   font-size: 16px;
   line-height: 18px;
-  padding: 14px 15px;
+  padding: 12px 14px;
   border: 1px solid $input-border-color;
+  height: 45px;
 
   &::placeholder {
     color: inherit;
@@ -15,5 +16,6 @@
     font-size: 20px;
     line-height: normal;
     padding: 11px 20px;
+    height: 52px;
   }
 }

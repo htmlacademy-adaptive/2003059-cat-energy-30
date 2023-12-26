@@ -1,12 +1,15 @@
 .selection__container {
-  padding: 27px 20px 32px;
+  padding-top: 27px;
+  padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 70px 60px;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 17px $horizontal-padding 79px;
+    padding-top: 43px;
+    padding-bottom: 79px;
   }
 }
 
@@ -15,10 +18,12 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 55px;
+    padding: 0;
   }
 }
 
@@ -33,5 +38,20 @@
     margin-bottom: 66px;
     font-size: 20px;
     line-height: 30px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.selection__form {
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }

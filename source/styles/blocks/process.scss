@@ -1,13 +1,13 @@
 .process__container {
-  padding: 0 20px 49px;
+  padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 109px 47px 30px;
+    padding-bottom: 47px;
     border-bottom: 1px solid $secondary-border-color;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 $horizontal-padding 69px;
+    padding-bottom: 69px;
     border-bottom: none;
   }
 }
@@ -30,12 +30,14 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 37px 138px;
+    width: 89%;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     gap: 20px 70px;
+    width: 100%;
   }
 }
 
