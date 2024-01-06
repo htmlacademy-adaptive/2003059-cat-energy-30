@@ -1,12 +1,8 @@
 .comparison {
   position: relative;
-}
-
-.comparison__images {
-  margin: 0 auto;
-  width: 280px;
   min-height: 256px;
-  position: relative;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 560px;
@@ -14,22 +10,91 @@
   }
 }
 
-.comparison__image-wrapper {
-  position: absolute;
+.comparison__images {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
-.comparison__control-wrapper {
+.comparison__image-wrapper--before {
   position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 0;
+  top: 0;
+  background-color: $tertiary-background-color;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $primary-background-color 152px, transparent 152px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, $primary-background-color 138px, transparent 138px);
+  }
 }
+
+.comparison__image {
+  max-width: none;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+// .comparison__control-wrapper {
+//   position: absolute;
+//   width: 100%;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// .comparison__label {
+//   display: flex;
+
+//   position: absolute;
+//   width: 100%;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
 
 .comparison__range {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 10;
+  width: 4px;
+  height: 100%;
   appearance: none;
-  height: 40px;
-  background-color: transparent;
-  width: 100%;
+  background-color: $icon-color;
+  margin: 0;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover,
+  &:hover::after {
+    background-color: $inverted-background-color;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: $pressed-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    mask-image: url("../../images/icons/stack.svg#comparison-arrows");
+    background-color: #666666;
+    mask-size: 24px 18px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
 
   &::-webkit-slider-thumb {
     appearance: none;
@@ -38,6 +103,18 @@
     background-color: $primary-background-color;
     border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border: 2px solid $icon-color;
+  }
+
+  &:hover::-webkit-slider-thumb {
+    border-color: $inverted-background-color;
+  }
+
+  &:active::-webkit-slider-thumb {
+    border-color: $pressed-color;
   }
 }

@@ -1,6 +1,29 @@
 .show-more {
   padding: 78px $horizontal-padding-mobile 25px;
   border: 1px solid #e8e8e8;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: #d3d3d3;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    display: block;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      top: 80px;
+    }
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(90deg);
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 82px;
@@ -12,7 +35,7 @@
     align-self: flex-start;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-top: 80px;
     padding: 150px 38px 40px;
     border: 2px solid $fourth-border-color;
@@ -65,6 +88,15 @@
   width: 100%;
   background-color: $secondary-background-color;
   color: inherit;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: inherit;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

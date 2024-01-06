@@ -1,20 +1,22 @@
 .promo {
   font-family: $secondary-font;
-  background-color: $inverted-background-color;
-  background-image: linear-gradient(to top, $primary-background-color 178px, transparent 178px);
+  background-color: $promo-background-color;
+  background-image: linear-gradient(to top, $primary-background-color 178px, $inverted-background-color-transparent 178px), image-set(url("../../images/promo/promo-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/promo/promo-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/promo/promo-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/promo/promo-background-mobile@2x.jpg") type("image/jpeg") 2x);
   color: $inverted-font-color;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    background-color: transparent;
+    background: none;
     color: $secondary-font-color;
-    position: relative;
     min-height: 850px;
   }
 
   @media (min-width: $desktop-width) {
     background-image: linear-gradient(to right, $primary-background-color 50%, transparent 50%);
-    background-color: $inverted-background-color;
-    min-height: 550px;
+    background-color: $promo-background-color;
+    min-height: 546px;
   }
 }
 
@@ -23,6 +25,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,7 +76,7 @@
 .promo__image {
   display: flex;
   margin: 0 auto;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -82,7 +85,7 @@
 
   @media (min-width: $desktop-width) {
     top: 0;
-    right: 330px;
+    left: 500px;
   }
 }
 

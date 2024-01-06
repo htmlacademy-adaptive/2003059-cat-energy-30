@@ -12,12 +12,18 @@ $primary-background-color: #ffffff;
 $secondary-background-color: #f2f2f2;
 $tertiary-background-color: #eaeaea;
 $inverted-background-color: #68b738;
+$inverted-background-color-transparent: rgba(104, 183, 56, 0.85);
+$promo-background-color: #414045;
 
 /* цвета элементов */
 $button-color: #68b738;
+$button-hover-color: #5eaa2f;
 $button-text-color: #ffffff;
 $icon-color: #666666;
 $icon-color-hover: #68b738;
+$pressed-color: rgba(94, 170, 47, 0.6);
+$error-color: #ff8282;
+
 
 /* цвета границ */
 $primary-border-color: #cdcdcd;
@@ -31,7 +37,7 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1330px;
 
-//горизонтальные отступы для контейнера на desktop
+/* горизонтальные отступы для контейнера */
 $horizontal-padding-mobile: 20px;
 $horizontal-padding-tablet: 30px;
 $horizontal-padding-desktop: 55px;

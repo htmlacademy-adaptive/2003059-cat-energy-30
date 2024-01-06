@@ -4,6 +4,7 @@
   line-height: 20px;
   text-transform: uppercase;
   background-color: $primary-background-color;
+  z-index: 5;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -23,29 +24,43 @@
 
 .nav-list__item {
   text-align: center;
-  border-bottom: 1px solid $secondary-border-color;
-
-  @media (min-width: $tablet-width) {
-    border-bottom: 2px solid transparent;
-  }
-
-  &--current {
-    @media (min-width: $tablet-width) {
-      border-bottom-color: $button-color;
-    }
-  }
 }
 
 .nav-list__link {
   color: inherit;
   padding: 22px 0 24px;
   display: block;
+  border-bottom: 1px solid $secondary-border-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--disabled,
+  &--disabled:hover,
+  &--disabled:active,
+  &--disabled:focus {
+    opacity: 0.1;
+    cursor: default;
+    outline: none;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 8px 0 5px;
+    border-bottom: 2px solid transparent;
   }
 
   @media (min-width: $desktop-width) {
     padding: 13px 0 8px;
+  }
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      border-color: $button-color;
+    }
   }
 }

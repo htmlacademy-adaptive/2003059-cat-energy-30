@@ -67,7 +67,7 @@
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
-      margin-bottom: 70px;
+      margin-bottom: 74px;
     }
   }
 
@@ -75,12 +75,12 @@
     margin-bottom: 31px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 52px;
+      margin-bottom: 50px;
     }
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
-      margin-bottom: 59px;
+      margin-bottom: 56px;
     }
   }
 }
@@ -109,11 +109,32 @@
   text-transform: none;
   margin-bottom: 36px;
   display: block;
+  position: relative;
+  width: fit-content;
+  background-color: $primary-background-color;
+  box-shadow: -20px 0 0 $primary-background-color, 20px 0 0 $primary-background-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: $inverted-background-color;
+    top: 0.6em;
+    right: 0;
+    box-shadow: 100vw 0 0 $inverted-background-color;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 73px;
+    box-shadow: -40px 0 0 $primary-background-color, 40px 0 0 $primary-background-color;
+
+    & br {
+      display: none;
+    }
   }
 }
 
@@ -123,6 +144,35 @@
   gap: 12px;
   align-items: center;
   width: 100%;
+  position: relative;
+
+  &:hover::before {
+    background-color: $icon-color-hover;
+  }
+
+  &--email::before,
+  &--telephone::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: $secondary-font-color;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+
+    @media (min-width: $tablet-width) {
+      top: 16px;
+      right: 14px;
+    }
+  }
+
+  &--email::before {
+    mask-image: url("../../images/icons/stack.svg#input-email");
+  }
+
+  &--telephone::before {
+    mask-image: url("../../images/icons/stack.svg#input-phone");
+  }
 }
 
 .form__label {
@@ -136,26 +186,6 @@
 }
 
 .form__field {
-  background-position: right 12px center;
-  background-repeat: no-repeat;
-  background-size: 20px;
-
-  @media (min-width: $tablet-width) {
-    background-position: right 14px center;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-position: right 16px center;
-  }
-
-  &--email {
-    background-image: url("../../images/icons/stack.svg#input-email");
-  }
-
-  &--telephone {
-    background-image: url("../../images/icons/stack.svg#input-phone");
-  }
-
   &--comment {
     width: 100%;
     height: 150px;

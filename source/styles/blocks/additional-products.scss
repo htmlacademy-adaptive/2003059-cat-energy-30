@@ -24,6 +24,22 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 35px;
+  position: relative;
+  width: fit-content;
+  background-color: $primary-background-color;
+  box-shadow: -20px 0 0 $primary-background-color, 20px 0 0 $primary-background-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: $inverted-background-color;
+    top: 0.5em;
+    right: 0;
+    box-shadow: 100vw 0 0 $inverted-background-color;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0 40px;
@@ -31,6 +47,7 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
+    box-shadow: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -38,6 +55,7 @@
     justify-self: start;
     padding: 0;
     margin-bottom: 77px;
+    box-shadow: -40px 0 0 $primary-background-color, 40px 0 0 $primary-background-color;
   }
 }
 

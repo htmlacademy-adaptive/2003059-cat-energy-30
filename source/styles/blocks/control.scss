@@ -1,1 +1,75 @@
-// стили для кастомизации радио и чекбоксов
+.control {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.control__input {
+  appearance: none;
+  margin: 0;
+  position: absolute;
+}
+
+.control__label {
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid $primary-border-color;
+    position: absolute;
+    left: -45px;
+    top: -4px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      width: 40px;
+      height: 40px;
+      left: -60px;
+      top: -7px;
+    }
+  }
+}
+
+.control__input[type="radio"] + .control__label::before {
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:checked + .control__label::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  left: -36px;
+  top: 5px;
+  border-radius: 50%;
+  background-color: $inverted-background-color;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: -49px;
+    top: 5px;
+  }
+}
+
+.control__input[type="checkbox"]:checked + .control__label::before {
+  background-image: url("../../images/icons/stack.svg#checkmark");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control__input:focus + .control__label::before {
+  border-color: $primary-font-color;
+}
+

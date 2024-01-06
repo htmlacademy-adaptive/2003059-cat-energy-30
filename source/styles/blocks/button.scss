@@ -13,6 +13,21 @@
   border: none;
   cursor: pointer;
 
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    background-color: $button-hover-color;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.1;
+    cursor: default;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
   }
