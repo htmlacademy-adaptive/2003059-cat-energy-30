@@ -9,6 +9,7 @@
     height: 34px;
     background-color: $icon-color;
     mask-image: url("../../images/icons/stack.svg#logo-htmlacademy");
+    flex-shrink: 0;
   }
 
   &:hover::after {
@@ -23,6 +24,11 @@
     opacity: 0.3;
   }
 
+  &--disabled {
+    opacity: 0.1;
+    cursor: default;
+  }
+
   @media (min-width: $tablet-width) {
     column-gap: 23px;
   }
@@ -32,4 +38,5 @@
   color: $primary-font-color;
   font-size: 16px;
   line-height: 20px;
+  max-width: 200px;
 }

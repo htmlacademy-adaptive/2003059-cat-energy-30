@@ -2,6 +2,7 @@
   background-color: $secondary-background-color;
   padding: 30px 20px 18px;
   position: relative;
+  align-self: start;
 
   @media (min-width: $tablet-width) {
     padding: 77px 316px 57px 52px;
@@ -58,6 +59,7 @@
   text-transform: uppercase;
   color: $secondary-font-color;
   position: relative;
+  display: inline-flex;
 
   &::after {
     content: "";
@@ -84,7 +86,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 52px;
     font-size: 20px;
     line-height: normal;
 
@@ -94,6 +95,21 @@
 
     &:hover::after {
       right: 0;
+    }
+  }
+
+  &--disabled,
+  &--disabled:active {
+    opacity: 0.1;
+    cursor: default;
+
+    &:hover::after {
+      right: 15px;
+      width: 24px;
+
+      @media (min-width: $tablet-width) {
+        right: 7px;
+      }
     }
   }
 }

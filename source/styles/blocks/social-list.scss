@@ -10,7 +10,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     border: none;
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 
@@ -35,6 +35,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--disabled {
+    opacity: 0.1;
+    cursor: default;
   }
 
   &--vk {

@@ -73,3 +73,7 @@
   border-color: $primary-font-color;
 }
 
+.control__input:disabled + .control__label {
+  opacity: 0.3;
+  cursor: default;
+}

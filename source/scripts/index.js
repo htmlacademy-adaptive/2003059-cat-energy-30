@@ -1,3 +1,5 @@
+// Бургер-меню
+
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 
@@ -14,6 +16,9 @@ function toggleMenu() {
 }
 
 navToggle.addEventListener('click', toggleMenu);
+
+
+// Слайдер с котом
 
 const slider = document.querySelector('.comparison__images');
 const before = document.querySelector('.comparison__image-wrapper--before');

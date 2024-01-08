@@ -12,6 +12,7 @@
   background-color: $button-color;
   border: none;
   cursor: pointer;
+  overflow-wrap: break-word;
 
   &:hover {
     background-color: $button-hover-color;

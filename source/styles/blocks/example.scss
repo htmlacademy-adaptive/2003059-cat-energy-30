@@ -96,6 +96,7 @@
 .example__item {
   text-align: center;
   width: 124px;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     width: 162px;

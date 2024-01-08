@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to right, $primary-background-color 50%, transparent 50%);
+    background-image: linear-gradient(to right, $primary-background-color 50%, $inverted-background-color-transparent 50%);
     background-color: $promo-background-color;
     min-height: 546px;
   }
@@ -37,6 +37,9 @@
   text-align: center;
   margin-bottom: 25px;
   color: inherit;
+  overflow-wrap: break-word;
+  z-index: 2;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -49,6 +52,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 81px;
     margin-left: 0;
+    max-width: 450px;
   }
 }
 
@@ -59,6 +63,8 @@
   color: inherit;
   margin: 0;
   margin-bottom: 29px;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;

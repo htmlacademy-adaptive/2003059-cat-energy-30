@@ -2,6 +2,7 @@
   padding: 78px $horizontal-padding-mobile 25px;
   border: 1px solid #e8e8e8;
   position: relative;
+  overflow-wrap: break-word;
 
   &::before,
   &::after {
@@ -86,15 +87,15 @@
 
 .show-more__button {
   width: 100%;
-  background-color: $secondary-background-color;
+  background-color: $secondary-button-color;
   color: inherit;
 
   &:hover {
-    background-color: #ebebeb;
+    background-color: $secondary-button-color-hover;
   }
 
   &:active {
-    background-color: #ebebeb;
+    background-color: $secondary-button-color-hover;
     color: inherit;
   }
 

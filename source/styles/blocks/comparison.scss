@@ -1,12 +1,12 @@
 .comparison {
   position: relative;
-  min-height: 256px;
+  height: 256px;
   width: 280px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 560px;
-    min-height: 512px;
+    height: 512px;
   }
 }
 
@@ -74,7 +74,7 @@
     height: 40px;
     transform: translate(-50%, -50%);
     mask-image: url("../../images/icons/stack.svg#comparison-arrows");
-    background-color: #666666;
+    background-color: $icon-color;
     mask-size: 24px 18px;
     mask-repeat: no-repeat;
     mask-position: center;

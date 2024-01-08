@@ -15,7 +15,7 @@
   }
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    border: 1px solid $primary-border-color;
   }
 
   &:focus {
@@ -23,9 +23,13 @@
     border-color: transparent;
   }
 
-  &:focus:invalid {
+  &:focus:required:invalid {
     outline: 2px solid $error-color;
     border-color: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 
   &::placeholder {

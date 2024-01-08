@@ -78,6 +78,7 @@
   margin-bottom: 14px;
   max-width: 76px;
   text-align: left;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     text-align: center;
@@ -96,6 +97,7 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
+  word-break: break-all;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
