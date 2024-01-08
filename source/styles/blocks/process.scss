@@ -26,6 +26,7 @@
   @include normalize-list;
   display: grid;
   gap: 20px;
+  counter-reset: numbers;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
@@ -93,7 +94,7 @@
     }
 
     &::after {
-      content: "";
+      content: counter(numbers);
       display: block;
       position: absolute;
       color: #f2f2f2;
@@ -103,23 +104,11 @@
       z-index: -1;
       right: 0;
       top: 0;
+      counter-increment: numbers;
     }
 
     &--health::after {
-      content: "1";
       right: 25px;
-    }
-
-    &--cooking::after {
-      content: "2";
-    }
-
-    &--meal::after {
-      content: "3";
-    }
-
-    &--time::after {
-      content: "4";
     }
   }
 }
