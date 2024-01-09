@@ -22,7 +22,7 @@ navToggle.addEventListener('click', toggleMenu);
 
 const slider = document.querySelector('.comparison__images');
 const before = document.querySelector('.comparison__image-wrapper--before');
-const change = document.querySelector('.comparison__range');
+const change = document.querySelector('.comparison__change');
 const body = document.body;
 
 let isActive = false;
@@ -56,7 +56,7 @@ const pauseEvents = (e) => {
   return false;
 };
 
-//двигаем мышкой
+//при движении мышки
 body.addEventListener('mousemove', (e) => {
   if (!isActive) {
     return; //если mousemove false - выходим из функции

@@ -41,27 +41,34 @@
   object-fit: cover;
 }
 
-.comparison__range {
+.comparison__change {
+  padding: 0;
+  border: none;
   position: absolute;
   left: 50%;
+  transform: translateX(-50%);
   top: 0;
-  z-index: 10;
+  z-index: 5;
   width: 4px;
   height: 100%;
-  appearance: none;
   background-color: $icon-color;
   margin: 0;
   border-radius: 2px;
   cursor: pointer;
 
-  &:hover,
-  &:hover::after {
-    background-color: $inverted-background-color;
-  }
-
-  &:active,
-  &:active::after {
-    background-color: $pressed-color;
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: $primary-background-color;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $icon-color;
+    z-index: 10;
   }
 
   &::after {
@@ -78,27 +85,24 @@
     mask-size: 24px 18px;
     mask-repeat: no-repeat;
     mask-position: center;
+    z-index: 15;
   }
 
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: 40px;
-    height: 40px;
-    background-color: $primary-background-color;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid $icon-color;
+  &:hover,
+  &:hover::after {
+    background-color: $icon-color-hover;
   }
 
-  &:hover::-webkit-slider-thumb {
-    border-color: $inverted-background-color;
+  &:hover::before {
+    border-color: $icon-color-hover;
   }
 
-  &:active::-webkit-slider-thumb {
+  &:active,
+  &:active::after {
+    background-color: $pressed-color;
+  }
+
+  &:active::before {
     border-color: $pressed-color;
   }
 }
