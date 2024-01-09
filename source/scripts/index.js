@@ -27,14 +27,14 @@ const body = document.body;
 
 let isActive = false;
 
+// при отпускании мышки
+change.addEventListener('mousedown', () => {
+  isActive = true;
+});
+
 // при нажатии мышкой и удержании
 body.addEventListener('mouseup', () => {
   isActive = false;
-});
-
-// при отпускании мышки
-body.addEventListener('mousedown', () => {
-  isActive = true;
 });
 
 // мышка ушла за пределы
