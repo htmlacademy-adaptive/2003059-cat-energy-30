@@ -1,12 +1,108 @@
-// стили для блока-слайдера с котами на главной
-
-.comparison__images {
-  margin: 0 auto;
+.comparison {
+  position: relative;
+  height: 256px;
   width: 280px;
-  min-height: 256px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 560px;
-    min-height: 512px;
+    height: 512px;
+  }
+}
+
+.comparison__images {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.comparison__image-wrapper--before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $tertiary-background-color;
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $primary-background-color 152px, transparent 152px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, $primary-background-color 138px, transparent 138px);
+  }
+}
+
+.comparison__image {
+  max-width: none;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.comparison__change {
+  padding: 0;
+  border: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 5;
+  width: 4px;
+  height: 100%;
+  background-color: $icon-color;
+  margin: 0;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: $primary-background-color;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid $icon-color;
+    z-index: 10;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    mask-image: url("../../images/icons/stack.svg#comparison-arrows");
+    background-color: $icon-color;
+    mask-size: 24px 18px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    z-index: 15;
+  }
+
+  &:hover,
+  &:hover::after {
+    background-color: $icon-color-hover;
+  }
+
+  &:hover::before {
+    border-color: $icon-color-hover;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: $pressed-color;
+  }
+
+  &:active::before {
+    border-color: $pressed-color;
   }
 }
