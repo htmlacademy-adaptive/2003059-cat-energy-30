@@ -52,7 +52,6 @@ const beforeAfterSlider = (x) => {
 // функция останавливает событие после скролла
 const pauseEvents = (e) => {
   e.stopPropagation();
-  e.preventDefault();
   return false;
 };
 

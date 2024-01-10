@@ -146,6 +146,7 @@
   width: 100%;
   position: relative;
   align-self: start;
+  min-width: 280px;
 }
 
 .form__label {
@@ -168,6 +169,7 @@
     width: 100%;
     height: 150px;
     resize: none;
+    padding-right: 12px;
 
     @media (min-width: $tablet-width) {
       height: 175px;
