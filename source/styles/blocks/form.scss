@@ -204,11 +204,11 @@
   }
 }
 
-.form__field:hover + .form__icon {
+.form__field:focus + .form__icon {
   color: $icon-color-hover;
 }
 
-.form__field:focus:invalid + .form__icon {
+.form__field:user-invalid + .form__icon {
   color: $error-color;
 }
 
