@@ -35,7 +35,7 @@
     width: 100vw;
     height: 2px;
     background-color: $inverted-background-color;
-    top: 0.5em;
+    top: 0.6em;
     right: 0;
     box-shadow: 100vw 0 0 $inverted-background-color;
     z-index: -1;
@@ -54,14 +54,14 @@
     grid-column: 1/-1;
     justify-self: start;
     padding: 0;
-    margin-bottom: 77px;
+    margin-bottom: 80px;
     box-shadow: -40px 0 0 $primary-background-color, 40px 0 0 $primary-background-color;
   }
 }
 
 .additional-products__list {
   @include normalize-list;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 68px;
@@ -69,5 +69,6 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    margin-top: -3px;
   }
 }

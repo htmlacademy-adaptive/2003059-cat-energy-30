@@ -15,6 +15,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-height: 147px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,12 +25,13 @@
 
 .main-footer__logo {
   flex-shrink: 0;
+  height: 24px;
 }
 
 .main-footer__social {
   @include normalize-list;
 
   @media (min-width: $tablet-width) {
-    margin-left: 30px;
+    margin-left: 35px;
   }
 }

@@ -19,6 +19,8 @@
     font-size: 20px;
     line-height: normal;
     background-color: transparent;
+    padding: 0;
+    padding-right: 2px;
   }
 }
 
@@ -28,7 +30,7 @@
 
 .nav-list__link {
   color: inherit;
-  padding: 22px 0 24px;
+  padding: 22px 0 23px;
   display: block;
   border-bottom: 1px solid $secondary-border-color;
 
@@ -50,12 +52,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 8px 0 5px;
+    padding: 12px 0 8px;
     border-bottom: 2px solid transparent;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 13px 0 8px;
+    padding: 13px 0 6px;
   }
 
   &--current {

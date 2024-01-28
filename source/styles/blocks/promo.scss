@@ -76,22 +76,23 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
+    margin-bottom: 51px;
   }
 }
 
 .promo__image {
   display: flex;
   margin: 0 auto;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 242px;
+    top: 241px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
-    left: 500px;
+    top: -1px;
+    left: 502px;
   }
 }
 
