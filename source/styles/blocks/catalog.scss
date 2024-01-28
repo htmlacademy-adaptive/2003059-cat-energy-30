@@ -1,11 +1,13 @@
 .catalog__title {
-  padding: 27px 20px 41px;
+  padding-top: 27px;
+  padding-bottom: 41px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 30px 84px;
+    padding-top: 40px;
+    padding-bottom: 84px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 74px 0 84px;
+    padding-top: 42px;
   }
 }

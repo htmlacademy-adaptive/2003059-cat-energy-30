@@ -1,19 +1,49 @@
 .input {
   font-family: inherit;
   text-transform: uppercase;
-  color: inherit;
+  color: $primary-font-color;
   font-size: 16px;
   line-height: 18px;
-  padding: 14px 15px;
-  border: 1px solid #e7e7e7;
+  padding: 12px 35px 12px 14px;
+  border: 1px solid $input-border-color;
+  height: 45px;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:hover {
+    border: 1px solid $primary-border-color;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-font-color;
+    border-color: transparent;
+  }
+
+  &:focus:required:invalid {
+    outline: 2px solid $error-color;
+    border-color: transparent;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+  }
 
   &::placeholder {
     color: inherit;
   }
 
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
-    padding: 11px 20px;
+    padding: 11px 35px 11px 20px;
+    height: 52px;
   }
 }

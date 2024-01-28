@@ -1,17 +1,16 @@
 .social-list {
-  @include normalize-list;
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0 20px;
-  border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid $tertiary-border-color;
+  border-top: 1px solid $tertiary-border-color;
   justify-content: center;
   gap: 12px 24px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     border: none;
-    max-width: 50%;
+    max-width: 40%;
   }
 }
 
@@ -21,20 +20,37 @@
 }
 
 .social-list__link {
-  color: $icon-color;
+  background-color: $icon-color;
   display: block;
   width: 100%;
   height: 100%;
 
   &:hover {
-    color: $icon-color-hover;
+    background-color: $icon-color-hover;
   }
 
   &:focus {
-    color: $icon-color-hover;
+    background-color: $icon-color-hover;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &--disabled {
+    opacity: 0.1;
+    cursor: default;
+  }
+
+  &--vk {
+    mask-image: url("../../images/icons/stack.svg#social-vkontakte");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#social-youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#social-telegram");
   }
 }

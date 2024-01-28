@@ -1,6 +1,30 @@
 .show-more {
-  padding: 78px 20px 25px;
+  padding: 77px $horizontal-padding-mobile 25px;
   border: 1px solid #e8e8e8;
+  position: relative;
+  overflow-wrap: break-word;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: #d3d3d3;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    display: block;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      top: 80px;
+    }
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(90deg);
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 82px;
@@ -12,9 +36,10 @@
     align-self: flex-start;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-top: 80px;
     padding: 150px 38px 40px;
+    border: 2px solid $fourth-border-color;
   }
 }
 
@@ -46,12 +71,13 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 18px;
     margin-bottom: 82px;
+    max-width: 170px;
 
     @media (min-width: $desktop-width) {
       margin-bottom: 90px;
@@ -61,8 +87,17 @@
 
 .show-more__button {
   width: 100%;
-  background-color: $secondary-background-color;
+  background-color: $secondary-button-color;
   color: inherit;
+
+  &:hover {
+    background-color: $secondary-button-color-hover;
+  }
+
+  &:active {
+    background-color: $secondary-button-color-hover;
+    color: inherit;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

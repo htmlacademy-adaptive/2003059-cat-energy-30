@@ -3,17 +3,56 @@
   display: inline-block;
   width: 100%;
   padding: 187px 59px 43px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-image: linear-gradient(to top, $inverted-background-color-transparent 0, $inverted-background-color-transparent 100%), image-set(url("../../images/gift-background-mobile@1x.webp") type("image/webp") 1x, url("../../images/gift-background-mobile@2x.webp") type("image/webp") 2x, url("../../images/gift-background-mobile@1x.jpg") type("image/jpeg") 1x, url("../../images/gift-background-mobile@2x.jpg") type("image/jpeg") 2x);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../../images/icons/stack.svg#promotion-gift");
+  }
 
   @media (min-width: $tablet-width) {
     padding: 71px 125px 69px 200px;
     min-height: 200px;
     display: flex;
     justify-content: end;
+    background-image: linear-gradient(to top, $inverted-background-color-transparent 0, $inverted-background-color-transparent 100%), image-set(url("../../images/gift-background-tablet@1x.webp") type("image/webp") 1x, url("../../images/gift-background-tablet@2x.webp") type("image/webp") 2x, url("../../images/gift-background-tablet@1x.jpg") type("image/jpeg") 1x, url("../../images/gift-background-tablet@2x.jpg") type("image/jpeg") 2x);
+
+    &::before {
+      top: 58px;
+      left: 118px;
+      width: 80px;
+      height: 82px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 185px 42px 43px;
     justify-content: center;
+    background-image: linear-gradient(to top, $inverted-background-color-transparent 0, $inverted-background-color-transparent 100%), image-set(url("../../images/gift-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/gift-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/gift-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/gift-background-desktop@2x.jpg") type("image/jpeg") 2x);
+
+    &::before {
+      top: 56px;
+      left: 124px;
+      height: 83px;
+    }
   }
 }
 

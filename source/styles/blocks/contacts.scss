@@ -1,5 +1,7 @@
 .contacts {
   background-color: $primary-background-color;
+  overflow-wrap: break-word;
+  position: relative;
 
   &--dark {
     background-color: $secondary-background-color;
@@ -8,26 +10,63 @@
 
 .contacts__container {
   position: relative;
+  padding-bottom: 362px;
+
+  &::before {
+    content: "";
+    background-image: image-set(url("../../images/map-pin@1x.webp") type("image/webp") 1x, url("../../images/map-pin@2x.webp") type("image/webp") 2x, url("../../images/map-pin@1x.png") type("image/png") 1x, url("../../images/map-pin@2x.png") type("image/png") 2x);
+    width: 57px;
+    height: 53px;
+    position: absolute;
+    left: 51%;
+    bottom: 170px;
+    transform: translateX(-51%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 400px;
+
+    &::before {
+      width: 113px;
+      height: 106px;
+      bottom: 147px;
+      left: 51%;
+      transform: translateX(-51%);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 95px;
+    padding-bottom: 106px;
+
+    &::before {
+      top: 130px;
+      left: 911px;
+    }
+  }
 }
 
 .contacts__text-wrapper {
-  padding: 26px 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: grid;
   justify-content: space-between;
   grid-template-columns: repeat(2, 140px);
 
   @media (min-width: $tablet-width) {
-    padding: 60px 70px;
+    padding: 60px 40px;
     grid-template-columns: repeat(2, 165px);
   }
 
   @media (min-width: $desktop-width) {
     padding: 60px 70px 60px 80px;
-    position: absolute;
-    top: 95px;
-    left: $horizontal-padding;
     background-color: $primary-background-color;
     width: 565px;
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -52,6 +91,11 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
@@ -63,10 +107,29 @@
 }
 
 .contacts__map {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 362px;
   background-color: $inverted-background-color;
+  background-image: image-set(url("../../images/map-mobile@1x.webp") type("image/webp") 1x, url("../../images/map-mobile@2x.webp") type("image/webp") 2x, url("../../images/map-mobile@1x.png") type("image/png") 1x, url("../../images/map-mobile@2x.png") type("image/png") 2x);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: $tablet-width) {
     height: 400px;
+    background-image: image-set(url("  ../../images/map-tablet@1x.webp") type("image/webp") 1x, url("  ../../images/map-tablet@2x.webp") type("image/webp") 2x, url("  ../../images/map-tablet@1x.png") type("image/png") 1x, url("  ../../images/map-tablet@2x.png") type("image/png") 2x);
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: image-set(url("  ../../images/map-desktop@1x.webp") type("image/webp") 1x, url("  ../../images/map-desktop@2x.webp") type("image/webp") 2x, url("  ../../images/map-desktop@1x.png") type("image/png") 1x, url("  ../../images/map-desktop@2x.png") type("image/png") 2x);
+    height: 100%;
+  }
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
 }

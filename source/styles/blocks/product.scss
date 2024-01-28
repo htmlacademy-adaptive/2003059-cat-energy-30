@@ -1,30 +1,38 @@
 .product {
-  padding: 20px 20px 25px;
+  padding: 20px $horizontal-padding-mobile 23px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 17px;
+  row-gap: 20px;
+  border-bottom: 1px solid $product-border-color;
+  min-height: 209px;
 
   @media (min-width: $tablet-width) {
     padding: 10px 37px 40px;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(180deg, transparent 81px, #f2f2f2 81px);
+    background-image: linear-gradient(180deg, transparent 81px, $secondary-background-color 81px);
     row-gap: 22px;
     align-self: flex-start;
+    border-bottom: none;
+    min-height: 511px;
   }
 
   @media (min-width: $desktop-width) {
-    row-gap: 12px;
+    row-gap: 14px;
+    padding-bottom: 37px;
   }
 }
 
 .product__text-wrapper {
+  margin-top: 3px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 9px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 
@@ -32,13 +40,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #222222;
+  color: $tertiary-font-color;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__link--image {
   width: 140px;
-  height: 107px;
+  height: 104px;
   margin: 0 auto;
+  justify-self: center;
 
   @media (min-width: $tablet-width) {
     width: 200px;
@@ -47,6 +64,18 @@
 
   @media (min-width: $desktop-width) {
     width: 169px;
+  }
+}
+
+.product__image {
+  margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 9px;
   }
 }
 
@@ -68,6 +97,7 @@
   margin-bottom: 14px;
   max-width: 76px;
   text-align: left;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     text-align: center;
@@ -86,6 +116,7 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
+  word-break: break-all;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -107,7 +138,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 5px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $primary-border-color;
   }
 
   @media (min-width: $desktop-width) {

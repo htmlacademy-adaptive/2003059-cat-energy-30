@@ -30,14 +30,14 @@
   }
 
   &--program {
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
-    padding: 22px 0 19px;
+    border-top: 1px solid $tertiary-border-color;
+    border-bottom: 1px solid $tertiary-border-color;
+    padding: 20px 0 20px;
     margin-bottom: 26px;
 
     @media (min-width: $tablet-width) {
-      border: 1px solid #e7e7e7;
-      padding: 23px 27px 27px 87px;
+      border: 1px solid $input-border-color;
+      padding: 23px 27px 27px 80px;
       margin-bottom: 65px;
     }
   }
@@ -58,7 +58,8 @@
   }
 
   &--comment {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
+    row-gap: 0;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 65px;
@@ -66,19 +67,51 @@
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
+      margin-bottom: 74px;
     }
   }
 
   &--additional {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 52px;
+      margin-bottom: 51px;
+      min-height: 205px;
     }
 
     @media (min-width: $desktop-width) {
       grid-column: 1/-1;
+      min-height: 93px;
+      margin-bottom: 58px;
     }
+  }
+}
+
+.form__group--contacts .form__title {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 74px;
+  }
+
+  // @media (min-width: $desktop-width) {
+  //   margin-bottom: 77px;
+  // }
+}
+
+.form__group--comment .form__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 77px;
+  }
+}
+
+.form__group--additional .form__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
   }
 }
 
@@ -90,11 +123,33 @@
   text-transform: none;
   margin-bottom: 36px;
   display: block;
+  position: relative;
+  width: fit-content;
+  background-color: $primary-background-color;
+  box-shadow: -20px 0 0 $primary-background-color, 20px 0 0 $primary-background-color;
+  padding-left: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: $inverted-background-color;
+    top: 0.6em;
+    right: 0;
+    box-shadow: 100vw 0 0 $inverted-background-color;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 57px;
+    margin-bottom: 73px;
+    box-shadow: -40px 0 0 $primary-background-color, 40px 0 0 $primary-background-color;
+
+    & br {
+      display: none;
+    }
   }
 }
 
@@ -104,44 +159,92 @@
   gap: 12px;
   align-items: center;
   width: 100%;
+  position: relative;
+  align-self: start;
+  min-width: 280px;
 }
 
 .form__label {
   font-size: 16px;
   line-height: 18px;
+  max-width: 100px;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: normal;
+    max-width: 150px;
   }
 }
 
 .form__field {
+  align-self: start;
+
   &--comment {
     width: 100%;
+    height: 150px;
     resize: none;
+    padding-right: 12px;
+    padding-top: 14px;
+
+    @media (min-width: $tablet-width) {
+      height: 175px;
+      padding-top: 11px;
+    }
   }
+}
+
+.form__icon {
+  position: absolute;
+  color: $secondary-font-color;
+  width: 20px;
+  height: 20px;
+  right: 12px;
+  top: 12px;
+
+  @media (min-width: $tablet-width) {
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.form__field:hover + .form__icon {
+  color: $icon-color-hover;
+}
+
+.form__field:focus:invalid + .form__icon {
+  color: $error-color;
+}
+
+.form__field:disabled + .form__icon {
+  color: $secondary-font-color;
+  opacity: 0.1;
 }
 
 .form__list {
   @include normalize-list;
   display: grid;
   row-gap: 13px;
-  padding-left: 45px;
+  padding-left: 39px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
+    row-gap: 11px;
   }
 }
 
 .form__group--additional .form__list {
+  margin-top: -3px;
+
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
+    row-gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -149,6 +252,11 @@
   @media (min-width: $tablet-width) {
     padding-left: 60px;
   }
+}
+
+.form__item {
+  padding: 6px;
+  word-break: break-word;
 }
 
 .form__button-wrapper {
@@ -161,6 +269,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/-1;
+    column-gap: 70px;
   }
 }
 
@@ -172,6 +281,10 @@
     line-height: 26px;
     padding: 14px 26px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
   }
 }
 

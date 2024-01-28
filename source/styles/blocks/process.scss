@@ -1,12 +1,14 @@
 .process__container {
-  padding: 0 20px 49px;
+  padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 109px 47px 30px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid $secondary-border-color;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 $horizontal-padding 69px;
+    padding-bottom: 69px;
+    border-bottom: none;
   }
 }
 
@@ -16,6 +18,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
+    line-height: 60px;
   }
 }
 
@@ -23,30 +26,98 @@
   @include normalize-list;
   display: grid;
   gap: 20px;
+  counter-reset: numbers;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 37px 138px;
+    width: 89%;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
-    gap: 20px 70px;
+    gap: 20px 80px;
+    width: 100%;
   }
 }
 
 .process__item {
   min-height: 60px;
-  padding-left: 80px;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $inverted-background-color;
+    background-size: 50%;
+    width: 60px;
+    height: 60px;
+    display: block;
+  }
+
+  &--health::before {
+    background-image: url("../../images/icons/stack.svg#process-leaf");
+    background-size: 30px 32px;
+  }
+
+  &--cooking::before {
+    background-image: url("../../images/icons/stack.svg#process-cooking");
+    background-size: 27px 30px;
+  }
+
+  &--meal::before {
+    background-image: url("../../images/icons/stack.svg#process-meal");
+    background-size: 26px 29px;
+  }
+
+  &--time::before {
+    background-image: url("../../images/icons/stack.svg#process-time");
+    background-size: 26px 31px;
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 280px;
     min-width: 230px;
-    padding: 151px 0 57px;
+    padding: 40px 0 57px;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 31px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: counter(numbers);
+      display: block;
+      position: absolute;
+      color: $secondary-background-color;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      z-index: -1;
+      right: 0;
+      top: 0;
+      counter-increment: numbers;
+    }
+
+    &--health::after {
+      right: 25px;
+    }
   }
 }
 
 .process__description {
   margin: 0;
+  max-width: 70%;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+  }
 }

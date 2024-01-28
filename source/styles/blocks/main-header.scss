@@ -6,54 +6,63 @@
 
 .main-header--index {
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to right, $primary-background-color 50%, transparent 50%);
-    background-color: $inverted-background-color;
+    background-image: linear-gradient(to right, $primary-background-color 51%, transparent 51%);
+    background-color: $promo-background-color;
     color: $inverted-font-color;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 694px;
+      background-image: linear-gradient(to right, $inverted-background-color-transparent 50%, $inverted-background-color-transparent 100%), image-set(url("../../images/promo/promo-background-desktop@1x.webp") type("image/webp") 1x, url("../../images/promo/promo-background-desktop@2x.webp") type("image/webp") 2x, url("../../images/promo/promo-background-desktop@1x.jpg") type("image/jpeg") 1x, url("../../images/promo/promo-background-desktop@2x.jpg") type("image/jpeg") 2x);
+      background-size: auto 100%;
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-color: $promo-background-color;
+    }
+
+    .nav-list__link--current {
+      border-bottom-color: $inverted-font-color;
+    }
   }
 }
 
 .main-header__container {
+  padding: 0;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 25px 30px;
+    padding: 25px $horizontal-padding-tablet;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px $horizontal-padding 0;
+    padding: 55px $horizontal-padding-desktop 30px;
   }
 }
 
 .main-header__logo-wrapper {
-  padding: 13px 55px 14px 20px;
+  padding: 13px 55px 13px $horizontal-padding-mobile;
+  border-bottom: 1px solid $secondary-border-color;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     display: flex;
     align-self: start;
+    border: none;
   }
 }
 
 .main-header__logo {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 
   @media (min-width: $tablet-width) {
-    color: $primary-font-color;
     max-width: 174px;
     column-gap: 13px;
   }
@@ -62,10 +71,6 @@
     max-width: 202px;
     column-gap: 14px;
   }
-}
-
-.main-header__logo .logo__image {
-  margin: 0 auto;
 }
 
 .main-header__logo .logo__image--text {
